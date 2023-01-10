@@ -1,4 +1,4 @@
-name: Symfony CI/CD
+name: Symfony CI
 on: [push, pull_request]
 jobs:
   symfony:
