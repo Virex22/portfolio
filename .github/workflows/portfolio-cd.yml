@@ -12,7 +12,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
+        key: ${{ secrets.SSHKEY }}
         port: ${{ secrets.PORT }}
         script: |
           cd ${{ secrets.PROJECT_PATH }}
