@@ -1,0 +1,25 @@
+name: Symfony CD
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy Project
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd ${{ secrets.PROJECT_PATH }}
+          git pull
+          composer install
+          php bin/console cache:clear
+          php bin/console doctrine:migrations:migrate
+          php bin/console cache:clear
+          php bin/console cache:warmup
+          sudo service apache2 restart
