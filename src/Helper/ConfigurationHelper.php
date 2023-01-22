@@ -4,6 +4,7 @@ namespace App\Helper;
 
 use App\Entity\Configuration;
 use App\Repository\ConfigurationRepository;
+use Symfony\Component\Translation\Exception\NotFoundResourceException;
 
 class ConfigurationHelper
 {
@@ -14,13 +15,26 @@ class ConfigurationHelper
         $this->configurationRepository = $configurationRepository;
     }
 
-    public function getConfiguration(string $key, string $default = null): ?string
+    /**
+     * @param string $key
+     * @return string
+     * @throws NotFoundResourceException
+     */
+    public function getConfiguration(string $key): string
     {
         $configuration = $this->configurationRepository->findOneBy(['name' => $key]);
 
-        return $configuration ? $configuration->getValue() : $default;
+        if ($configuration instanceof Configuration)
+            return $configuration->getValue();
+
+        throw new NotFoundResourceException("Configuration with key $key not found");
     }
 
+    /**
+     * @param string $key
+     * @param string $value
+     * @return void
+     */
     public function setConfiguration(string $key, string $value): void
     {
         $configuration = $this->configurationRepository->findOneBy(['name' => $key]);
@@ -33,5 +47,14 @@ class ConfigurationHelper
         $configuration->setValue($value);
 
         $this->configurationRepository->add($configuration, true);
+    }
+
+    /**
+     * @param string $key
+     * @return bool
+     */
+    public function existConfiguration(string $key): bool
+    {
+        return $this->configurationRepository->findOneBy(['name' => $key]) instanceof Configuration;
     }
 }
