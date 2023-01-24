@@ -21,7 +21,7 @@ class KernelRequestListener
         if (!$this->maintenanceHandler->isInMaintenance())
             return;
 
-        $response = new Response($this->twig->render('maintenance/maintenance.html.twig'), Response::HTTP_SERVICE_UNAVAILABLE);
+        $response = new Response($this->twig->render('global/maintenance/maintenance.html.twig'), Response::HTTP_SERVICE_UNAVAILABLE);
 
         $event->setResponse($response);
         $event->stopPropagation();

@@ -1,0 +1,23 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}
+    {{ "maintenances.title" | trans({}, 'maintenance') }}
+{% endblock %}
+
+{% block head %}
+<meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('maintenance') }}
+{% endblock %}
+
+{% block body %}
+    <nav>
+
+    </nav>
+    <div class="container">
+        <p>test</p>
+    </div>
+    {% include '/global/partials/_footer.html.twig' %}
+{% endblock %}
