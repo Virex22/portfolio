@@ -1,7 +1,54 @@
+@import "colors";
 
 .container {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    width: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+
+
+    @media (max-width: 940px) {
+      flex-direction: column;
+    }
+
+    .maintenance-bloc {
+      flex-direction: column;
+      align-self: center;
+    }
+  }
+
+  aside {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 80%;
+      object-fit: contain;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 1rem;
+    @media (max-width: 500px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-wrap: normal;
+    @media (max-width: 500px) {
+      font-size: 0.8rem;
+    }
+  }
 }

@@ -3,5 +3,36 @@
 {% endblock %}
 
 <footer>
-  
+    <div class="left-network">
+        <p  class="footer-title">{{ "footer.network.title" | trans({}, 'footer') }}</p>
+        <div class="footer_network">
+            <ul class="footer_network_list">
+                <li><a href="#youtube" target="_blank"><img src="{{ asset('images/youtube.svg') }}" alt="youtube svg"/>Youtube</a></li>
+                <li><a href="#codingame" target="_blank"><img src="{{ asset('images/codingame.svg') }}" alt="codingame svg"/>Codingame</a></li>
+            </ul>
+            <ul class="footer_network_list">
+                <li><a href="#github" target="_blank"><img src="{{ asset('images/github.svg') }}" alt="github svg"/>Github</a></li>
+                <li><a href="#discord" target="_blank"><img src="{{ asset('images/discord.svg') }}" alt="discord svg"/>Discord</a></li>
+            </ul>
+            <ul class="footer_network_list">
+                <li><a href="#linkedin" target="_blank"><img src="{{ asset('images/linkedin.svg') }}" alt="linkedin svg"/>Linkedin</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-mention">
+        <ul>
+            <li>©️Vincent REMY 2022-{{ "now"|date("Y") }}, <a href="#">{{ "footer.legal.title" | trans({}, 'footer') }}</a></li>
+            <li>{{ "footer.legal.text" | trans({}, 'footer') }} <a href="#">Valentin</a></li>
+        </ul>
+    </div>
+    <div class="right-sitemap">
+        <p  class="footer-title">{{ "footer.sitemap.title" | trans({}, 'footer') }}</p>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Réalisations</a></li>
+            <li><a href="#">Compétences</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
 </footer>

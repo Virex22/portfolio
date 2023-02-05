@@ -1,7 +1,7 @@
 {% extends '/base.html.twig' %}
 
 {% block title %}
-    {{ "maintenances.title" | trans({}, 'maintenance') }}
+    {{ "maintenance.title" | trans({}, 'maintenance') }}
 {% endblock %}
 
 {% block head %}
@@ -13,11 +13,16 @@
 {% endblock %}
 
 {% block body %}
-    <nav>
-
-    </nav>
     <div class="container">
-        <p>test</p>
+        <main>
+            <div class="maintenance-bloc">
+                <h1>{{ 'maintenance.title'|trans({}, 'maintenance') }}</h1>
+                <p>{{ 'maintenance.description'|trans({}, 'maintenance') }}</p>
+            </div>
+            <aside>
+                <img src="{{ asset('images/maintenance.svg') }}" alt="Maintenance">
+            </aside>
+        </main>
+        {% include '/global/partials/_footer.html.twig' %}
     </div>
-    {% include '/global/partials/_footer.html.twig' %}
 {% endblock %}
