@@ -16,11 +16,11 @@ jobs:
         port: ${{ secrets.PORT }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          "echo ${{ secrets.PASSWORD }} | sudo -S git pull"
           cd ${{ secrets.PROJECT_PATH }}
-          composer install
-          npm run dev
-          php bin/console cache:clear
-          php bin/console doctrine:schema:update --force
-          php bin/console cache:clear
-          php bin/console cache:warmup
+          sudo git pull origin main
+          sudo composer install
+          sudo npm run dev
+          sudo php bin/console cache:clear
+          sudo php bin/console doctrine:schema:update --force
+          sudo php bin/console cache:clear
+          sudo php bin/console cache:warmup
