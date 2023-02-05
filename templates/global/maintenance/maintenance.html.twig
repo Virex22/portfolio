@@ -1,0 +1,28 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}
+    {{ "maintenance.title" | trans({}, 'maintenance') }}
+{% endblock %}
+
+{% block head %}
+<meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('maintenance') }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <main>
+            <div class="maintenance-bloc">
+                <h1>{{ 'maintenance.title'|trans({}, 'maintenance') }}</h1>
+                <p>{{ 'maintenance.description'|trans({}, 'maintenance') }}</p>
+            </div>
+            <aside>
+                <img src="{{ asset('images/maintenance.svg') }}" alt="Maintenance">
+            </aside>
+        </main>
+        {% include '/global/partials/_footer.html.twig' %}
+    </div>
+{% endblock %}

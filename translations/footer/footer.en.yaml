@@ -1,0 +1,8 @@
+footer :
+  network :
+    title : "My network"
+  sitemap :
+    title : "Sitemap"
+  legal :
+    text : "Developpement and Integration by myself, maquette by"
+    title : "Legal"

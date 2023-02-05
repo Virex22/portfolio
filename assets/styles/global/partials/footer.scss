@@ -1,0 +1,157 @@
+@mixin footer-text {
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer{
+    background: linear-gradient(180deg, #5F96AD 0%, #41526D 100%);
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p.footer-title {
+        @include footer-text;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .left-network,
+    .middle-mention,
+    .right-sitemap {
+        width: 33%;
+        display: flex;
+        align-items: center;
+    }
+
+    .left-network {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+
+        .footer_network {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+            padding: 0 20px 0 0;
+            @media (max-width: 500px) {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+
+            .footer_network_list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0 20px 0 0;
+                $footer_network_size: 35px;
+                @media (max-width: 500px) {
+                    margin: 0;
+                    width: 100%;
+                    align-items: center;
+                }
+
+                li {
+                    margin: 10px 0;
+
+                    img {
+                        @media (max-width: 500px) {
+                            display: none;
+                            text-align: center;
+                        }
+                        height: $footer_network_size;
+                        transition: all 0.3s ease-in-out;
+                        padding: 0 5px;
+
+                        &:hover {
+                            transform: scale(1.1=1);
+                        }
+                    }
+
+                    a {
+                        @include footer-text;
+                        transition: all 0.3s ease-in-out;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                            color: #fff;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .middle-mention {
+        @media (max-width: 1300px) {
+            order: 3;
+            width: 100%;
+            margin: 10px 0;
+        }
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+        }
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        justify-content: end;
+        @include footer-text;
+        a{
+            text-decoration: underline;
+            @include footer-text;
+        }
+    }
+
+    .right-sitemap {
+        @media (max-width: 1300px) {
+            order: 2;
+            margin: 10px 0;
+        }
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+            width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        ul {
+            text-align: right;
+            @media (max-width: 1300px) {
+                text-align: center;
+            }
+            flex-direction: column;
+            @include footer-text;
+
+            li {
+                margin: 5px 3px;
+                @include footer-text;
+                font-size: 1.2rem;
+                transition: all 0.3s ease-in-out;
+
+                a {
+                    @include footer-text;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    color: #fff;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
