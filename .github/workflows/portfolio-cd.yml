@@ -16,8 +16,8 @@ jobs:
         port: ${{ secrets.PORT }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          "echo ${{ secrets.PASSWORD }} | sudo -S git pull"
           cd ${{ secrets.PROJECT_PATH }}
+          git pull origin main
           composer install
           npm run dev
           php bin/console cache:clear
