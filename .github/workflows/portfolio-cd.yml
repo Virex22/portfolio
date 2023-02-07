@@ -17,10 +17,11 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           cd ${{ secrets.PROJECT_PATH }}
-          sudo git pull origin main
-          sudo composer install
-          sudo npm run dev
-          sudo php bin/console cache:clear
-          sudo php bin/console doctrine:schema:update --force
-          sudo php bin/console cache:clear
-          sudo php bin/console cache:warmup
+          git pull origin main
+          composer install
+          npm i
+          npm run dev
+          php bin/console cache:clear
+          php bin/console doctrine:schema:update --force
+          php bin/console cache:clear
+          php bin/console cache:warmup
