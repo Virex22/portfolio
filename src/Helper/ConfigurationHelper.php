@@ -57,4 +57,12 @@ class ConfigurationHelper
     {
         return $this->configurationRepository->findOneBy(['name' => $key]) instanceof Configuration;
     }
+
+    public function removeConfiguration(string $key): void
+    {
+        $configuration = $this->configurationRepository->findOneBy(['name' => $key]);
+
+        if ($configuration instanceof Configuration)
+            $this->configurationRepository->remove($configuration, true);
+    }
 }
