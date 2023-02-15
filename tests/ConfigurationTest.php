@@ -2,6 +2,7 @@
 
 namespace App\Tests;
 
+use App\Entity\Configuration;
 use App\Helper\ConfigurationHelper;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\Translation\Exception\NotFoundResourceException;
@@ -36,5 +37,16 @@ class ConfigurationTest extends KernelTestCase
         // test the configuration helper
         $this->expectException(NotFoundResourceException::class);
         $configurationHelper->getConfiguration('test');
+    }
+
+    public function testEntity()
+    {
+        $configuration = new Configuration();
+        $configuration->setName('test');
+        $configuration->setValue('test');
+
+        $this->assertEquals('test', $configuration->getName());
+        $this->assertEquals('test', $configuration->getValue());
+        $this->assertNull($configuration->getId());
     }
 }
