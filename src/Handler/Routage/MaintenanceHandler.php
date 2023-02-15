@@ -6,7 +6,7 @@ use App\Helper\ConfigurationHelper;
 
 class MaintenanceHandler
 {
-    private static $configurationKey = 'APP_MAINTENANCE';
+    public static $configurationKey = 'APP_MAINTENANCE';
     private $configurationHelper;
 
     public function __construct(ConfigurationHelper $configurationHelper)

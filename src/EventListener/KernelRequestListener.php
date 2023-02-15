@@ -11,10 +11,6 @@ class KernelRequestListener
     private $maintenanceHandler;
     private $twig;
 
-    private $excludeRoutes = [
-        '/images'
-    ];
-
     public function __construct(MaintenanceHandler $maintenanceHandler, \Twig\Environment $twig)
     {
         $this->maintenanceHandler = $maintenanceHandler;
@@ -23,9 +19,6 @@ class KernelRequestListener
 
     public function onKernelRequest(RequestEvent $event){
         if (!$this->maintenanceHandler->isInMaintenance())
-            return;
-
-        if (in_array($event->getRequest()->getPathInfo(), $this->excludeRoutes))
             return;
 
         $response = new Response($this->twig->render('global/maintenance/maintenance.html.twig'), Response::HTTP_SERVICE_UNAVAILABLE);
