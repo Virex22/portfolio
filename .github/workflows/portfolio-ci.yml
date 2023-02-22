@@ -57,6 +57,8 @@ jobs:
 #          php bin/console d:f:l --env=test --no-interaction
         env:
           DATABASE_URL: mysql://root:symfony@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/symfony
+      - name: Npm install
+        run: npm install
 
       - name: Install PHPUnit
         run: simple-phpunit install
