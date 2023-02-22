@@ -27,7 +27,7 @@ class SkillGroup
     /**
      * @ORM\Column(type="integer")
      */
-    private $acquired_percentage;
+    private $aquired_percentage;
 
     /**
      * @ORM\Column(type="integer")
@@ -61,14 +61,14 @@ class SkillGroup
         return $this;
     }
 
-    public function getAcquiredPercentage(): ?int
+    public function getAquiredPercentage(): ?int
     {
-        return $this->acquired_percentage;
+        return $this->aquired_percentage;
     }
 
-    public function setAcquiredPercentage(int $acquired_percentage): self
+    public function setAquiredPercentage(int $aquired_percentage): self
     {
-        $this->acquired_percentage = $acquired_percentage;
+        $this->aquired_percentage = $aquired_percentage;
 
         return $this;
     }

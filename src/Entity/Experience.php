@@ -22,7 +22,7 @@ class Experience
     /**
      * @ORM\Column(type="string", length=50)
      */
-    private $compagny_name;
+    private $company_name;
 
     /**
      * @ORM\Column(type="string", length=50)
@@ -59,14 +59,14 @@ class Experience
         return $this->id;
     }
 
-    public function getCompagnyName(): ?string
+    public function getCompanyName(): ?string
     {
-        return $this->compagny_name;
+        return $this->company_name;
     }
 
-    public function setCompagnyName(string $compagny_name): self
+    public function setCompanyName(string $company_name): self
     {
-        $this->compagny_name = $compagny_name;
+        $this->company_name = $company_name;
 
         return $this;
     }

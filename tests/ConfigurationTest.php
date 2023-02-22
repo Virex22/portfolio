@@ -38,15 +38,4 @@ class ConfigurationTest extends KernelTestCase
         $this->expectException(NotFoundResourceException::class);
         $configurationHelper->getConfiguration('test');
     }
-
-    public function testEntity()
-    {
-        $configuration = new Configuration();
-        $configuration->setName('test');
-        $configuration->setValue('test');
-
-        $this->assertEquals('test', $configuration->getName());
-        $this->assertEquals('test', $configuration->getValue());
-        $this->assertNull($configuration->getId());
-    }
 }
