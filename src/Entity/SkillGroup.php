@@ -93,22 +93,22 @@ class SkillGroup
         return $this->skills;
     }
 
-    public function addSkills(Skill $skills): self
+    public function addSkill(Skill $skill): self
     {
-        if (!$this->skills->contains($skills)) {
-            $this->skills[] = $skills;
-            $skills->setSkillGroup($this);
+        if (!$this->skills->contains($skill)) {
+            $this->skills[] = $skill;
+            $skill->setSkillGroup($this);
         }
 
         return $this;
     }
 
-    public function removeSkill(Skill $skills): self
+    public function removeSkill(Skill $skill): self
     {
-        if ($this->skills->removeElement($skills)) {
+        if ($this->skills->removeElement($skill)) {
             // set the owning side to null (unless already changed)
-            if ($skills->getSkillGroup() === $this) {
-                $skills->setSkillGroup(null);
+            if ($skill->getSkillGroup() === $this) {
+                $skill->setSkillGroup(null);
             }
         }
 
