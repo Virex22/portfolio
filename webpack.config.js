@@ -22,6 +22,7 @@ Encore
      */
     .addEntry('app', './assets/entrypoints/app.js')
     .addEntry('footer', './assets/entrypoints/partials/footer.js')
+    .addEntry('navbar', './assets/entrypoints/partials/navbar.js')
     .addEntry('maintenance', './assets/entrypoints/maintenance.js')
 
 

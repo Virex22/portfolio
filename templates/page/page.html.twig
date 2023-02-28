@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AboutController!{% endblock %}
+
+{% block body %}
+    {% include '/global/partials/_navbar.html.twig' %}
+        {% block pageContent %} {# child content #} {% endblock %}
+    {% include '/global/partials/_footer.html.twig' %}
+{% endblock %}

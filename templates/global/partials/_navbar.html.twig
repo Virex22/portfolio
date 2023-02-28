@@ -1,0 +1,11 @@
+{% block stylesheets %}
+    {{ encore_entry_link_tags('navbar') }}
+{% endblock %}
+<nav>
+    <ul>
+        <li><a href="{{ path('app_home') }}">{{ 'navbar.home'|trans({}, 'navbar') }}</a></li>
+        <li><a href="{{ path('app_about') }}">{{ 'navbar.about'|trans({}, 'navbar') }}</a></li>
+        <li><a href="{{ path('app_realization') }}">{{ 'navbar.realization'|trans({}, 'navbar') }}</a></li>
+        <li><a href="{{ path('app_contact') }}">{{ 'navbar.contact'|trans({}, 'navbar') }}</a></li>
+    </ul>
+</nav>
