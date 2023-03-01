@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  height: 30px;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  img {
+    height: 30px;
+    width: 30px;
+    align-self: center;
+    margin: 0 20px;
+  }
+  ul {
+    display: none;
+  }
+  .burger {
+    align-self: center;
+    &:hover {
+      cursor: pointer;
+    }
+    .line1, .line2, .line3 {
+        width: 25px;
+        height: 4px;
+        background-color: #525252;
+        border-radius: 5px;
+        margin: 4px;
+        transition: 0.4s;
+    }
+  }
+}
