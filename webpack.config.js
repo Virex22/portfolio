@@ -24,6 +24,7 @@ Encore
     .addEntry('footer', './assets/entrypoints/partials/footer.js')
     .addEntry('navbar', './assets/entrypoints/partials/navbar.js')
     .addEntry('maintenance', './assets/entrypoints/maintenance.js')
+    .addEntry('home', './assets/entrypoints/home.js')
 
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)

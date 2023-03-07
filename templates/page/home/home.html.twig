@@ -1,11 +1,29 @@
 {% extends 'page/page.html.twig' %}
 
-{% block pageContent %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    </style>
+{% block stylesheets %}
+    {{ encore_entry_link_tags('home') }}
+    {{ parent() }}
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %} 
 
-    <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
+{% block pageContent %}
+
+<div class="swiper" style="width: 600px; height: 300px; margin: 0 auto;">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
     </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
 {% endblock %}
