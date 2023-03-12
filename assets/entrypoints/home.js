@@ -3,6 +3,7 @@ import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
+import '../styles/global/page/home.scss';
 
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination, Autoplay]);
@@ -18,6 +19,7 @@ const swiper = new Swiper('.swiper', {
     grabCursor: true,
     slidesPerView: 1,
     spaceBetween: 0,
+    disableOnInteraction: false,
   
     // If we need pagination
     pagination: {
@@ -37,6 +39,7 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+
   });
 
 swiper.init();
