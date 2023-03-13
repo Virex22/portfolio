@@ -154,8 +154,7 @@ class AppFixtures extends Fixture
     }
 
     /**
-     * @param Experience $experience
-     * @param ObjectManager $manager
+     * @param $entity
      * @return void
      */
     private function setSkillsRelation($entity): void
