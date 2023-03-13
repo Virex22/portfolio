@@ -2,7 +2,8 @@
   "dependencies": {
     "@symfony/stimulus-bridge": "^3.2.1",
     "@symfony/webpack-encore": "^4.2.0",
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "swiper": "^9.1.0"
   },
   "name": "portfolio-remy-vincent",
   "version": "1.0.0",

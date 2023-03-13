@@ -1,11 +1,65 @@
 {% extends 'page/page.html.twig' %}
 
-{% block pageContent %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    </style>
+{% block stylesheets %}
+    {{ encore_entry_link_tags('home') }}
+    {{ parent() }}
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %} 
 
-    <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
+{% block pageContent %}
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="summary">
+        <div class="summary-about">
+
+        </div>
+        <div class="summary-skill">
+
+        </div>
+        <div class="summary-passion">
+
+        </div>
+        <div class="summary-realization">
+
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="services-card">
+            <img src="#" alt="name" class="service-image">
+            <p class="service-title"> Service Title </p>
+            <p class="service-subtitle"> Service Subtitle </p>
+            <p class="service-description"> Service Description </p>
+        </div>
+    </div>
+
+    <div class="skills">
+        <div class="skills-logo">
+            <img src="#" alt="name" class="skill-image">
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="passions-logo">
+            <img src="#" alt="name" class="passion-image">
+        </div>
     </div>
 {% endblock %}
