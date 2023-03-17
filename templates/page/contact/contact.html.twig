@@ -1,11 +1,27 @@
 {% extends 'page/page.html.twig' %}
 
 {% block pageContent %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    </style>
-
-    <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
+    <div id="contact-headband"></div>
+    <h1 style="visibility: hidden /* for seo */">Me contacter</h1>
+    <div id="contact-form-wrapper">
+        <div id="contact-form-left">
+            <p id="contact-title">Me contacter</p>
+            <p id="contact-subtitle">Besoin d’en savoir plus ? Envie d’avancer ensemble ? Vous pouvez me contacter, c’est juste en dessous !</p>
+            <div id="contact-form">
+                {# TODO : symfony form #}
+            </div>
+        </div>
+        <div id="contact-form-right">
+            <p class="contact-form-right-title">Coordonnées</p>
+            <p class="contact-form-right-subtitle">Text</p>
+        </div>
+        <div id="contact-form-right">
+            <p class="contact-form-right-title">Mentions légales</p>
+            <p class="contact-form-right-subtitle">Text</p>
+        </div>
+        <div id="contact-form-right">
+            <p class="contact-form-right-title">FAQ</p>
+            <p class="contact-form-right-subtitle">Text</p>
+        </div>
     </div>
 {% endblock %}
