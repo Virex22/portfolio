@@ -11,16 +11,17 @@
     </div>
     <div class="page-pannel">
         <h2> {{ "about.skill.title" | trans({}, 'about') }} </h2>
-        <div class="skills" >
-            <p> Skill title placeholder </p>
-            <img src="skill" alt="skill"/>
-            <progress value="30" max="100"> 10% </progress>
-        </div>
-        <div class="skills" >
-            <p> Skill title placeholder </p>
-            <img src="skill" alt="skill"/>
-            <progress value="40" max="100"> 40% </progress>
-        </div>
+        {% for skillGroup in skillGroups %}
+            {% if skillGroup.skills is not empty %}
+                <div class="skills" >
+                    <p> {{ skillGroup.customName }} </p>
+                    {% for skill in skillGroup.skills %}
+                        <img src="{{ skill.badge }}" alt="{{ skill.name }}"/>
+                    {% endfor %}
+                    <progress value="{{ skillGroup.aquiredPercentage }}" max="100"> {{ skillGroup.aquiredPercentage }}% </progress>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
     <div>
         <h2> {{ "about.background.title"  | trans({}, 'about') }} </h2>
@@ -28,6 +29,13 @@
             <h3> Background title placeholder </h3>
             <p> Background text placeholder </p>
             <img src="background" alt="background"/>
+            {% for experience in experiences %}
+                <div class="experience" >
+                    <h3> {{ experience.companyName }} | {{ experience.postName }} </h3>
+                    <p> description {# TODO : experience description #} </p>
+                    <img src="{{ experience.compagnyLogo }}" alt="{{ experience.companyName }} logo"/>
+                </div>
+            {% endfor %}
         </div>
     </div>
     <div class="page-pannel">
