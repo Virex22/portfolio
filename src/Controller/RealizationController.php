@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\RealizationService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,10 +12,9 @@ class RealizationController extends AbstractController
     /**
      * @Route("/realization", name="app_realization")
      */
-    public function index(): Response
+    public function index(RealizationService $realizationService): Response
     {
-        return $this->render('page/realization/realization.html.twig', [
-            'controller_name' => 'RealizationController',
-        ]);
+        $viewData = $realizationService->getViewData();
+        return $this->render('page/realization/realization.html.twig', $viewData);
     }
 }

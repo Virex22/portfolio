@@ -88,7 +88,7 @@ class Project
     /**
      * @return Collection<int, Skill>
      */
-    public function getSkill(): Collection
+    public function getSkills(): Collection
     {
         return $this->skill;
     }
