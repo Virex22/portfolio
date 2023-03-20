@@ -2,8 +2,8 @@
 
 {% block pageContent %}
     <div id="pinned-project">
-        <h1>Projets</h1>
-        <h2>Principaux projet</h2>
+        <h1>{{ "realization.title" | trans({}, 'realization') }}
+        <h2>{{ "realization.mainproject" | trans({}, 'realization') }}</h2>
         {% for project in pinnedProjects %}
             <div class="project">
                 <div class="tech-list">
@@ -21,24 +21,24 @@
                 <img src="#arrow-right" alt="view">
             </div>
         {% endfor %}
-        <h2>Tous les projets</h2>
+        <h2>{{ "realization.allprojects" | trans({}, 'realization') }}</h2>
         <div id="project-filter-container">
             <div class="project-filter">
-                <p class="project-filter-title">Technologie utilisé</p>
+                <p class="project-filter-title">{{ "realization.filter.tech" | trans({}, 'realization') }}</p>
+                <select name="project-filter-tech" id="project-filter-tech">
+                    <option value="all"></option>
+                    <option value="techName">techName</option>
+                </select>
+            </div>
+            <div class="project-filter">
+                <p class="project-filter-title">{{ "realization.filter.date" | trans({}, 'realization') }}</p>
                 <select name="project-filter-tech" id="project-filter-tech">
                     <option value="all">Tous</option>
                     <option value="techName">techName</option>
                 </select>
             </div>
             <div class="project-filter">
-                <p class="project-filter-title">Date</p>
-                <select name="project-filter-tech" id="project-filter-tech">
-                    <option value="all">Tous</option>
-                    <option value="techName">techName</option>
-                </select>
-            </div>
-            <div class="project-filter">
-                <p class="project-filter-title">Type de projet</p>
+                <p class="project-filter-title">{{ "realization.filter.type" | trans({}, 'realization') }}</p>
                 <select name="project-filter-tech" id="project-filter-tech">
                     <option value="all">Tous</option>
                     <option value="school">École</option>

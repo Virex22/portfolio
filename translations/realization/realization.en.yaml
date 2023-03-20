@@ -1,0 +1,9 @@
+realization:
+  title: "Realization"
+  mainproject: "Pinned Projects"
+  allprojects: "All Projects"
+  filter:
+    tech: "Technology"
+    type: "Type"
+    date: "Date"
+
