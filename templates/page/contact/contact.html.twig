@@ -2,29 +2,29 @@
 
 {% block pageContent %}
     <div id="contact-headband"></div>
-    <h1 style="visibility: hidden /* for seo */">Me contacter</h1>
+    <h1 style="visibility: hidden /* for seo */">{{"contact.title" | trans({}, 'contact')}}</h1>
     <div id="contact-form-wrapper">
         <div id="contact-form-left">
-            <p id="contact-title">Me contacter</p>
-            <p id="contact-subtitle">Besoin d’en savoir plus ? Envie d’avancer ensemble ? Vous pouvez me contacter, c’est juste en dessous !</p>
+            <p id="contact-title">{{"contact.title" | trans({}, 'contact')}}</p>
+            <p id="contact-subtitle">{{"contact.subtitle.1" | trans({}, 'contact')}}</p>
+            <p id="contact-subtitle">{{"contact.subtitle.2" | trans({}, 'contact')}}</p>
             <div id="contact-form">
                 {{ form_start(contactForm) }}
                 {{ form_widget(contactForm) }}
-                <button type="submit" class="btn btn-primary">Envoyer</button>
+                <button type="submit" class="btn btn-primary">{{"contact.form.send" | trans({}, 'contact')}}</button>
                 {{ form_end(contactForm) }}
             </div>
         </div>
         <div id="contact-form-right">
-            <p class="contact-form-right-title">Coordonnées</p>
-            <p class="contact-form-right-subtitle">Text</p>
+            <p class="contact-form-right-title">{{"contact.info.coordinate.title" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.coordinate.address" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.coordinate.phone" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.coordinate.email" | trans({}, 'contact')}}</p>
         </div>
         <div id="contact-form-right">
-            <p class="contact-form-right-title">Mentions légales</p>
-            <p class="contact-form-right-subtitle">Text</p>
-        </div>
-        <div id="contact-form-right">
-            <p class="contact-form-right-title">FAQ</p>
-            <p class="contact-form-right-subtitle">Text</p>
+            <p class="contact-form-right-title">{{"contact.info.legal.title" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.legal.publisher" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">Vincent REMY</p>
         </div>
     </div>
 {% endblock %}

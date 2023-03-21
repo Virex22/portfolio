@@ -1,8 +1,0 @@
-realization:
-  title: "Realisation"
-  mainproject: "Principaux projets"
-  allprojects: "Tous mes projets"
-  filter:
-    tech: "Technologie"
-    type: "Type"
-    date: "Date"

@@ -1,9 +1,9 @@
 about:
   skill:
-    title: "Mes compétence"
+    title: Mes compétence
   background:
-    title: "Mon parcours"
-  convinced: "Convaincu ?"
-  meet: "Rencontrons-nous !"
-  contactme: "Me contacter"
-  cv: "Mon CV"
+    title: Mon parcours
+  convinced: Convaincu ?
+  meet: Rencontrons-nous !
+  contactme: Me contacter
+  cv: Mon CV
