@@ -1,8 +1,8 @@
 footer :
   network :
-    title : "Mes réseaux"
+    title : Mes réseaux
   sitemap :
-    title : "Plan du site"
+    title : Plan du site
   legal :
-    text : "Développement et intégration faite par moi même, maquette du site réalisé par"
-    title : "Mentions légales"
+    text : Développement et intégration faite par moi même, maquette du site réalisé par
+    title : Mentions légales

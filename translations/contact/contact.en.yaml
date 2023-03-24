@@ -1,0 +1,20 @@
+contact:
+  title: Contact me
+  subtitle:
+    1: Need more information ? Want to work together ?
+    2: You can contact me, it’s just below!
+  form:
+    send: Send
+    name: Name
+    email: Email
+    subject: Subject
+    message: Message
+  info:
+    coordinate:
+      title: Coordinate
+      address: 7 street André Theuriet, 57000 Metz, France
+      phone: +33 6 57 76 00 28
+      email: vincentremy222@gmail.com
+    legal:
+      title: Legal
+      publisher: Publication manager

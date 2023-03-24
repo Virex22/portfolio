@@ -1,11 +1,30 @@
 {% extends 'page/page.html.twig' %}
 
 {% block pageContent %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    </style>
-
-    <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
+    <div id="contact-headband"></div>
+    <h1 style="visibility: hidden /* for seo */">{{"contact.title" | trans({}, 'contact')}}</h1>
+    <div id="contact-form-wrapper">
+        <div id="contact-form-left">
+            <p id="contact-title">{{"contact.title" | trans({}, 'contact')}}</p>
+            <p id="contact-subtitle">{{"contact.subtitle.1" | trans({}, 'contact')}}</p>
+            <p id="contact-subtitle">{{"contact.subtitle.2" | trans({}, 'contact')}}</p>
+            <div id="contact-form">
+                {{ form_start(contactForm) }}
+                {{ form_widget(contactForm) }}
+                <button type="submit" class="btn btn-primary">{{"contact.form.send" | trans({}, 'contact')}}</button>
+                {{ form_end(contactForm) }}
+            </div>
+        </div>
+        <div id="contact-form-right">
+            <p class="contact-form-right-title">{{"contact.info.coordinate.title" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.coordinate.address" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.coordinate.phone" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.coordinate.email" | trans({}, 'contact')}}</p>
+        </div>
+        <div id="contact-form-right">
+            <p class="contact-form-right-title">{{"contact.info.legal.title" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">{{"contact.info.legal.publisher" | trans({}, 'contact')}}</p>
+            <p class="contact-form-right-subtitle">Vincent REMY</p>
+        </div>
     </div>
 {% endblock %}

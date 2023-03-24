@@ -1,11 +1,69 @@
 {% extends 'page/page.html.twig' %}
 
 {% block pageContent %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    </style>
-
-    <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
+    <div id="pinned-project">
+        <h1>{{ "realization.title" | trans({}, 'realization') }}
+        <h2>{{ "realization.mainproject" | trans({}, 'realization') }}</h2>
+        {% for project in pinnedProjects %}
+            <div class="project">
+                <div class="tech-list">
+                    {% for skill in project.skills %}
+                        <p class="badge">{{ skill.name }}</p>
+                    {% endfor %}
+                </div>
+                <p> {# TODO : add project date#} </p>
+                <div class="title">
+                    <h3>{{ project.name }}</h3>
+                </div>
+                <div class="description">
+                    <p>{{ project.description }}</p>
+                </div>
+                <img src="#arrow-right" alt="view">
+            </div>
+        {% endfor %}
+        <h2>{{ "realization.allprojects" | trans({}, 'realization') }}</h2>
+        <div id="project-filter-container">
+            <div class="project-filter">
+                <p class="project-filter-title">{{ "realization.filter.tech" | trans({}, 'realization') }}</p>
+                <select name="project-filter-tech" id="project-filter-tech">
+                    <option value="all"></option>
+                    <option value="techName">techName</option>
+                </select>
+            </div>
+            <div class="project-filter">
+                <p class="project-filter-title">{{ "realization.filter.date" | trans({}, 'realization') }}</p>
+                <select name="project-filter-tech" id="project-filter-tech">
+                    <option value="all">Tous</option>
+                    <option value="techName">techName</option>
+                </select>
+            </div>
+            <div class="project-filter">
+                <p class="project-filter-title">{{ "realization.filter.type" | trans({}, 'realization') }}</p>
+                <select name="project-filter-tech" id="project-filter-tech">
+                    <option value="all">Tous</option>
+                    <option value="school">École</option>
+                    <option value="personal">Personnel</option>
+                    <option value="professional">Professionnel</option>
+                </select>
+            </div>
+        </div>
+        <div id="project-list">
+            {% for project in projects %}
+                <div class="project">
+                    <div class="tech-list">
+                        {% for skill in project.skills %}
+                            <p class="badge">{{ skill.name }}</p>
+                        {% endfor %}
+                    </div>
+                    <p> {# TODO : add project date#} </p>
+                    <div class="title">
+                        <h3>{{ project.name }}</h3>
+                    </div>
+                    <div class="description">
+                        <p>{{ project.description }}</p>
+                    </div>
+                    <img src="#arrow-right" alt="view">
+                </div>
+            {% endfor %}
     </div>
 {% endblock %}

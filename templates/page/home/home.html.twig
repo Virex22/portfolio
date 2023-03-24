@@ -11,18 +11,14 @@
 {% block pageContent %}
 
     <div class="swiper">
-      <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
-        <!-- Slides -->
         <div class="swiper-slide">Slide 1</div>
         <div class="swiper-slide">Slide 2</div>
         <div class="swiper-slide">Slide 3</div>
       </div>
 
-      <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
 
-      <!-- If we need navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
@@ -43,18 +39,23 @@
     </div>
 
     <div class="services">
-        <div class="services-card">
-            <img src="#" alt="name" class="service-image">
-            <p class="service-title"> Service Title </p>
-            <p class="service-subtitle"> Service Subtitle </p>
-            <p class="service-description"> Service Description </p>
-        </div>
+        {% for service in services %}
+            <div class="services-card">
+                <p class="service-title"> {{ service.name }} </p>
+                {% if service.subtitle is defined %}
+                    <p class="service-subtitle"> {{ service.subtitle }} </p>
+                {% endif %}
+                <p class="service-description"> {{ service.description }} </p>
+            </div>
+        {% endfor %}
     </div>
 
     <div class="skills">
-        <div class="skills-logo">
-            <img src="#" alt="name" class="skill-image">
-        </div>
+        {% for skill in skills %}
+            <div class="skills-logo">
+                <img src="{{ skill.badge }}" alt="{{ skill.name }}" class="skill-image">
+            </div>
+        {% endfor %}
     </div>
 
     <div class="contact">

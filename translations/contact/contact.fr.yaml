@@ -1,0 +1,20 @@
+contact:
+  title: Contactez-moi
+  subtitle:
+    1: Besoin d’en savoir plus ? Envie d’avancer ensemble ?
+    2: Vous pouvez me contacter, c’est juste en dessous !
+  form:
+    send: Envoyer
+    name: Nom
+    email: Email
+    subject: Sujet
+    message: Message
+  info:
+    coordinate:
+      title: Coordonnées
+      address: 7 rue André Theuriet, 57000 Metz, France
+      phone: +33 6 57 76 00 28
+      email: vincentremy222@gmail.com
+    legal:
+      title: Mentions légales
+      publisher: Responsable de la publication
