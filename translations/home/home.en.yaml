@@ -1,0 +1,14 @@
+home:
+  summary:
+    about:
+      title: "About"
+      content: "I am a web and mobile developer, passionate about new technologies and new web trends."
+    skill:
+      title: "Skills"
+      content: "I have different skills in web and mobile development, I am a fullstack and software developer, so I can develop web applications in integrality, but also mobile applications. software extensions or video games."
+    passion:
+      title: "Passions"
+      content: "Development is a passion since my 15 years, I started by creating mobile games, then I started to develop game mods then websites, and finally web and mobile applications."
+    realization:
+      title: "Realizations"
+      content: "You will find on this site my realizations, whether they are personal projects or professional projects, as well as projects that I have realized for school or for customers."

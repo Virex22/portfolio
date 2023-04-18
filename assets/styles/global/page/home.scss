@@ -2,7 +2,49 @@
   width: 100%;
   height: 400px;
 }
+
 .swiper-slide {
   background-size: cover;
   background: url("https://picsum.photos/1920/1080") no-repeat center;
+}
+
+.summary-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+  width: 80%;
+  margin: 25px auto;
+
+  .summary {
+    display: flex;
+    border: 3px solid #5F96AD;
+    border-radius: 20px;
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 1rem
+    }
+
+    .summary-right {
+      flex-direction: column;
+      display: flex;
+      margin: 1rem;
+
+      .summary-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #000000;
+        flex:1;
+      }
+
+      /* not summary-title */
+      p:not(.summary-title) {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #020202;
+      }
+    }
+  }
 }

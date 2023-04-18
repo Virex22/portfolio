@@ -11,30 +11,46 @@
 {% block pageContent %}
 
     <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-      </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
 
-      <div class="swiper-pagination"></div>
+        <div class="swiper-pagination"></div>
 
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 
-    <div class="summary">
-        <div class="summary-about">
-
+    <div class="summary-section">
+        <div class="summary summary-about">
+            <img src="{{ asset('images/home/summary-about.svg') }}" alt="name" class="summary-image">
+            <div class="summary-right">
+                <p class="summary-title">{{ "home.summary.about.title" | trans({}, 'home') }}</p>
+                <p>{{ "home.summary.about.content" | trans({}, 'home') }}</p>
+            </div>
         </div>
-        <div class="summary-skill">
-
+        <div class="summary summary-skill">
+            <img src="{{ asset('images/home/summary-skill.svg') }}" alt="name" class="summary-image">
+            <div class="summary-right">
+                <p class="summary-title">{{ "home.summary.skill.title" | trans({}, 'home') }}</p>
+                <p>{{ "home.summary.skill.content" | trans({}, 'home') }}</p>
+            </div>
         </div>
-        <div class="summary-passion">
-
+        <div class="summary summary-passion">
+            <img src="{{ asset('images/home/summary-passions.svg') }}" alt="name" class="summary-image">
+            <div class="summary-right">
+                <p class="summary-title">{{ "home.summary.passion.title" | trans({}, 'home') }}</p>
+                <p>{{ "home.summary.passion.content" | trans({}, 'home') }}</p>
+            </div>
         </div>
-        <div class="summary-realization">
-
+        <div class="summary summary-realization">
+            <img src="{{ asset('images/home/summary-realization.svg') }}" alt="name" class="summary-image">
+            <div class="summary-right">
+                <p class="summary-title">{{ "home.summary.realization.title" | trans({}, 'home') }}</p>
+                <p>{{ "home.summary.realization.content" | trans({}, 'home') }}</p>
+            </div>
         </div>
     </div>
 

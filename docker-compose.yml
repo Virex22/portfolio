@@ -18,21 +18,21 @@ services:
     networks:
       - dev
   phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: pma
-        links:
-          - db
-        environment:
-          PMA_HOST: db
-          PMA_PORT: 3306
-          PMA_USER: root
-          PMA_PASSWORD: password
-          PMA_ARBITRARY: 1
-        restart: always
-        ports:
-          - 8081:80
-        networks:
-          - dev
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: password
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+    networks:
+      - dev
   maildev:
     image: maildev/maildev
     container_name: maildev

@@ -14,7 +14,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 500,
     autoplay: {
-        delay: 2000,
+        delay: 8000,
     },
     grabCursor: true,
     slidesPerView: 1,
